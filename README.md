@@ -33,6 +33,28 @@ The project emphasizes correctness and security all the while also sporting supe
 
 Qubes Video Companion is available for installation on Qubes OS in packaged form for both Fedora (.rpm) and Debian (.deb). To get it, simply add the Qubes Contribution Repo to the list of available repositories and install the `qubes-video-companion` package!
 
+On Debian 10 install required dependencies:
+
+```
+sudo apt update
+sudo apt install pandoc
+```
+
+```
+git clone https://github.com/elliotkillick/qubes-video-companion.git
+cd qubes-video-companion
+git tags
+```
+
+Choose most recent tag:
+
+```
+git verify-tag v1.0.4
+```
+
+
+
+
 ### Run the following commands in Dom0 (AdminVM)
 1. `sudo qubes-dom0-update qubes-repo-contrib`
 2. `sudo qubes-dom0-update --clean qubes-video-companion`
