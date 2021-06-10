@@ -37,7 +37,7 @@ On Debian 10 install required dependencies:
 
 ```
 sudo apt update
-sudo apt install pandoc
+sudo apt install pandoc debhelper-compat
 ```
 
 ```
@@ -50,6 +50,14 @@ Choose most recent tag:
 
 ```
 git verify-tag v1.0.4
+```
+
+After verifying tag prepare package required for deb build:
+
+```
+tar czvf qubes-video-companion_1.0.0.orig.tar.gz qubes-video-companion
+dpkg-source --before-build .
+dpkg-buildpackage -us -uc
 ```
 
 
